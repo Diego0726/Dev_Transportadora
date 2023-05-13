@@ -53,4 +53,4 @@ ToneladaVal=(121.90*Tonelada)*0.153
 Bonus_Funcionario=Kmrodado/10
 boleto=round (ToneladaVal+Bonus_Funcionario+calc,2)
 
-print(f"Muito obrigado Sr(a){nomeCliente}seu pedido foi concluido, o valor total deu R${boleto:,} e será levado por um caminhão modelo {Mcarros}")
+print(f"Muito obrigado Sr(a){nomeCliente} seu pedido foi concluido, o valor total deu R${boleto:,} e será levado por um caminhão modelo {Mcarros}")
