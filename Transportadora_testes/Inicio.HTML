@@ -1,41 +1,70 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev_Transportadora</title>
+    <link rel="shortcut icon" href="icone2.png" type="image/x-icon">
     <link rel="stylesheet" href="Inicio.CSS">
     <script src="https://kit.fontawesome.com/f6bc5d7c98.js" crossorigin="anonymous"></script>
-
+    
 </head>
 <body>
- <div class="container">
-    <div class="form-box">
-        <h1>Inscreva-se
-    
-    <form>
-       <h6> 
-        <div class="input-group">
-        <div class="input-field">
-        <i class="fa-solid fa-envelope"></i>   
-        <input type="email" placeholder="Email">
-            </div>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Inscreva-se</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="Namefield">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" placeholder="Nome Completo">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Senha">
+                    </div>
 
-        <div class="input-group">
-        <div class="input-field">
-        <i class="fa-solid fa-lock"></i>    
-        <input type="password" placeholder="Senha">
+                </div>
+                <p>Esqueceu a senha? <a href="#">Clique aqui!</a></p>
+                <div class="btn-field">
+                    <button type="button" id="Inscreva-seBtn">Inscreva-se</button>
+                    <button type="button" class="disable" id="LoginBtn">Login</button>
                 </div>
 
-        <div class="input-group">
-        <div class="input-field">
-        <i class="fa-solid fa-lock"></i>    
-        <input type="password" placeholder="Confirme a senha "></h6>            
-             </div>
-             <p>Esqueceu a senha? <a href="#">Clique aqui! </a></p>
-         </div>
-      </form>
-    </div> 
- </div>  
+            </form>
+        </div>
+    </div>
+<script>
+    let LoginBtn = document.getElementById("LoginBtn")
+    let InscrevaseBtn = document.getElementById("Inscreva-seBtn")
+    let Namefield = document.getElementById("Namefield")
+    let title = document.getElementById("title")
+
+    LoginBtn.onclick = function(){
+        Namefield.style.maxHeight = "0";
+        title.innerHTML = "Login"
+        InscrevaseBtn.classList.add("disable");
+        LoginBtn.classList.remove("disable");
+    }
+    InscrevaseBtn.onclick = function(){
+        Namefield.style.maxHeight = "60px";
+        title.innerHTML = "Inscreva-se"
+        LoginBtn.classList.remove("disable");
+        InscrevaseBtn.classList.add("disable");        
+    }
+
+
+</script>
+
 
 </body>
 </html>
