@@ -13,30 +13,30 @@
     <div class="container">
         <div class="form-box">
             <h1 id="title">Inscreva-se</h1>
-            <form>
+            <form id="myForm">
                 <div class="input-group">
                     <div class="input-field" id="Namefield">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Nome Completo">
+                        <input type="text" placeholder="Nome Completo" required>
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Email" required>
                     </div>
                     
                 </div>
                 <div class="input-group">
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="text" placeholder="Senha" required>
                     </div>
 
                 </div>
                 <p>Esqueceu a senha? <a href="#">Clique aqui!</a></p>
                 <div class="btn-field">
-                    <button type="button" id="Inscreva-seBtn">Inscreva-se</button>
+                    <button type="submit" id="Inscreva-seBtn">Inscreva-se</button>
                     <button type="button" class="disable" id="LoginBtn">Entrar</button>
                 </div>
 
@@ -44,24 +44,34 @@
         </div>
     </div>
 <script>
-    let LoginBtn = document.getElementById("LoginBtn")
-    let InscrevaseBtn = document.getElementById("Inscreva-seBtn")
-    let Namefield = document.getElementById("Namefield")
-    let title = document.getElementById("title")
+    let form = document.getElementById("myForm");
+    let InscrevaseBtn = document.getElementById("Inscreva-seBtn");
 
-    LoginBtn.onclick = function(){
-        Namefield.style.maxHeight = "0";
-        title.innerHTML = "Entrar"
-        InscrevaseBtn.classList.add("disable");
-        LoginBtn.classList.remove("disable");
-    }
-    InscrevaseBtn.onclick = function(){
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita o envio do formulário
+
+        // Verifica se o formulário é válido antes do redirecionamento
+        if (form.checkValidity()) {
+            window.location.href = "Cadastro.html";
+        }
+    });
+
+    InscrevaseBtn.onclick = function() {
+        let Namefield = document.getElementById("Namefield");
+        let title = document.getElementById("title");
+        let LoginBtn = document.getElementById("LoginBtn");
+
+        Namefield.style.maxHeight = "0px";
+        title.innerHTML = "Entrar";
+        LoginBtn.classList.add("disable");
+        InscrevaseBtn.classList.remove("disable");
+    
+        
         Namefield.style.maxHeight = "60px";
-        title.innerHTML = "Inscreva-se"
+        title.innerHTML = "Inscreva-se";
         LoginBtn.classList.remove("disable");
-        InscrevaseBtn.classList.add("disable");        
-    }
-
+        InscrevaseBtn.classList.add("disable");
+    };
 
 </script>
 
