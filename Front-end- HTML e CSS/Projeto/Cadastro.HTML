@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev_Transportadora</title>
+    <link rel="stylesheet" href="Cadastro.CSS">
+    <link rel="shortcut icon" href="imagens/icone2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/f6bc5d7c98.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div class="container">
+ <div class="form-box">
+    <h1>Cadastre o seu veículo</h1>
+        <form id="Formulario" > 
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-truck"></i> 
+                    <input type="text" placeholder="Placa do Veiculo" required>
+
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-barcode"></i>
+                    <input type="text" placeholder="Número do Renavam" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-id-card"></i>
+                    <input type="text" placeholder="CPF" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-brush"></i>
+                    <input type="text" placeholder="Cor do Veiculo" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <input type="date" placeholder="Ano de Fabricação" required>  
+                </div>
+                <div class="btn-field">
+                <p><button type="button" id="Enviar">Enviar Cadastro</button></p>
+               
+            </div>
+        </form>
+ </div>
+ </div>
+    <script>
+        
+        let Enviar;
+
+window.addEventListener("DOMContentLoaded", function() {
+    Enviar = document.getElementById("Enviar");
+
+    Enviar.addEventListener("click", function(event) {
+        event.preventDefault();
+        let form = document.getElementById("Formulario")
+        if (form.checkValidity()) {
+        window.location.href = "Pedidos.html";
+        }     
+    });
+});
+
+ </script>
+
+</body>
+</html>
