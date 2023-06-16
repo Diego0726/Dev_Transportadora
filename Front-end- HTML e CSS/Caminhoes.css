@@ -1,12 +1,19 @@
-*{
-  margin: 0 auto;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .container {
-  width: 100%;
+  
+  margin: 0 auto;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(imagens/Background\ Caminhões.png);
+  background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)),
+    url(imagens/Background\ Caminhões.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,109 +21,100 @@
   justify-content: space-around;
   align-items: center;
 }
-#Menu{
+
+#Menu {
   background-color: #000000;
 }
-#Menu ul{
+
+#Menu ul {
   list-style-type: none;
   padding: 0;
   background-color: black;
   position: relative;
   z-index: 1;
 }
+
 #Menu ul li {
-  display: inline ;
+  display: inline;
 }
-#Menu ul li a{
-  font-family: 'Open Sans', sans-serif;
-  color:#ffffff;
+
+#Menu ul li a {
+  color: #ffffff;
   display: inline-block;
   text-decoration: none;
-  padding: 20px;
+  padding: 8.5px;
   transition: background .3s;
-
 }
+
 #Menu ul li a:last-child i {
   float: right;
   color: #ffffff;
   background-color: #3c00a0;
-
 }
-#Menu ul li a :hover{
+
+#Menu ul li a:hover {
   background-color: #3c00a0;
-
 }
 
-
-.border {
-  height: 369px;
-  width: 290px;
-  background: transparent;
-  border-radius: 10px;
-  transition: border 1s;
-  position: relative;
-}
-
-.border:hover {
-  border: 1px solid white;
-}
-
-.card {
+.container .card {
   height: 379px;
   width: 300px;
-  background: grey;
-  border-radius: 10px;
-  transition: background 0.8s;
-  overflow: hidden;
   background: black;
-  box-shadow: 0 70px 63px -60px #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: transform 0.3s;
 }
 
-.card0 {
+.container .card:hover {
+  transform: scale(1.05);
+}
+
+.container .card h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  margin: 20px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.container .card .icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container .card .icons i {
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.container .card0 {
   background: url('imagens/caminhão\ toco.jpg') center center no-repeat;
   background-size: 250px;
   height: 300%;
 }
 
-.card0:hover h2,
-.card0:hover .fa {
-  opacity: 1;
-}
-
-.card1 {
+.container .card1 {
   background: url('imagens/Caminhão\ 3-4.jpg') center center no-repeat;
   background-size: 250px;
   height: 300%;
 }
 
-.card1:hover h2,
-.card1:hover .fa {
-  opacity: 1;
-}
-
-.card2 {
+.container .card2 {
   background: url('imagens/Caminhão\ truck.jpg') center center no-repeat;
   background-size: 250px;
   height: 300%;
 }
 
-.card2:hover h2,
-.card2:hover .fa {
+.container .card:hover h2,
+.container .card:hover .icons i {
   opacity: 1;
-}
-
-h2 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: white;
-  margin: 20px;
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.fa {
-  opacity: 0;
 }
