@@ -1,0 +1,191 @@
+*{
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 8%;
+  padding-top: 90px ;
+}
+.card{
+  background: #7343c0;
+  border-radius: 30px;
+  box-shadow: 0px 2px 23px #441ab8;
+
+}
+.mediaCard{
+  background: url(imagens/Caminhão\ 3-4.jpg) center/cover;
+  height: 200px;
+  width: 260px;
+}
+.topCard{
+  padding: 20px;
+  
+}
+.bottomText {
+  padding: 10px ;
+}
+
+.button {
+  
+  flex-basis: 50%;
+  background: #3c00a0;
+  color: #fff;
+  height: 40px;
+  width: 200px;
+  border-radius: 60px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+  display: block;
+  margin: 10px auto; 
+}
+
+.content1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 13.5%;
+
+}
+.card1{
+  background: #7343c0;
+  border-radius: 30px;
+  box-shadow: 0px 2px 23px #441ab8;
+
+}
+.mediaCard1{
+  background: url(imagens/caminhão\ toco.jpg) center/cover;
+  height: 200px;
+  width: 260px;
+}
+.topCard1{
+  padding: 20px;
+  padding-top: px;
+}
+.bottomText1 {
+  padding: 10px ;
+}
+
+.button1 {
+  
+  flex-basis: 50%;
+  background: #3c00a0;
+  color: #fff;
+  height: 40px;
+  width: 200px;
+  border-radius: 60px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+  display: block;
+  margin: 10px auto; 
+}
+.content2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 150px;
+
+}
+.card2{
+  background: #7343c0;
+  border-radius: 30px;
+  box-shadow: 0px 2px 23px #441ab8;
+
+}
+.mediaCard2{
+  background: url(imagens/Caminhão\ truck.jpg) center/cover;
+  height: 200px;
+  width: 260px;
+}
+.topCard2{
+  padding: 20px;
+  padding-top: px;
+}
+.bottomText2 {
+  padding: 10px ;
+}
+
+.button2 {
+  
+  flex-basis: 50%;
+  background: #3c00a0;
+  color: #fff;
+  height: 40px;
+  width: 200px;
+  border-radius: 60px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+  display: block;
+  margin: 10px auto; 
+}
+
+
+
+
+
+.snip1226 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1226 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+.snip1226 a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.snip1226 a:before,
+.snip1226 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1226 a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #e67e22;
+}
+.snip1226 a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.snip1226 li:hover a,
+.snip1226 .current a {
+  transform: translateY(100%);
+}
+/* Demo purposes only */
+body {
+  background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(imagens/Background\ Caminhões.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 99%;
+  height: 93.5vh;
+}
