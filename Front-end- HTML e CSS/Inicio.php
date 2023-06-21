@@ -11,7 +11,7 @@ if(isset($_POST['email']) == 0 ){
     $email = $mysqli->real_escape_string($_POST['senha']); // Obtém o valor do campo de senha e protege contra ataques de SQL injection
 
     $sql_code = "Select * FROM usuarios WHERE email = '$email' AND senha = '$senha'"; // Cria uma consulta SQL para verificar se o email e senha correspondem a um registro na tabela "usuarios"
-    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error); // Executa a consulta SQL no banco de dados e armazena o resultado na variável $sql_query
+    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:") $mysqli->error; // Executa a consulta SQL no banco de dados e armazena o resultado na variável $sql_query
 
     $quantidade = $sql_query->num_rows; // Obtém o número de linhas retornadas pela consulta
 

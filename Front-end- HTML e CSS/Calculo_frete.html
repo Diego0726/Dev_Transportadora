@@ -2,6 +2,12 @@
 <html>
 <head>
   <title>Formulário de Entrega</title>
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala inicial de visualização para dispositivos móveis -->
+  <title>Dev_Transportadora</title> <!-- Define o título da página -->
+  <link rel="shortcut icon" href="imagens/icone2.png" type="image/x-icon"> <!-- Define o ícone da página -->
+  <link rel="stylesheet" href="Calculo_frete.css"> <!-- Importa um arquivo CSS externo -->
+  <script src="https://kit.fontawesome.com/f6bc5d7c98.js" crossorigin="anonymous"></script> <!-- Importa o kit de ícones do Font Awesome -->
   <script>
     function calcularFrete() {
       let nomeCliente = document.getElementById("nameInput").value;
@@ -41,6 +47,16 @@
   </script>
 </head>
 <body>
+
+  <ul class="snip1226">
+    <li class="current"><a href="#" data-hover="Home">Home</a></li> <!-- Link para a página inicial -->
+    <li><a href="#" data-hover="About Us">Sobre Nós</a></li> <!-- Link para a página "Sobre Nós" -->
+    <li><a href="#" data-hover="Blog">Blog</a></li> <!-- Link para a página de blog -->
+    <li><a href="#" data-hover="Services">Serviços</a></li> <!-- Link para a página de serviços -->
+    <li><a href="#" data-hover="Contact">Contato</a></li> <!-- Link para a página de contato -->
+  </ul>
+  <Form>
+    <div class="form-box">
   <h1>Formulário de Entrega</h1>
   
   <label for="name">Nome:</label>
@@ -59,7 +75,8 @@
   <input type="number" id="kmRodadoInput"><br><br>
   
   <button onclick="calcularFrete()">Calcular</button>
-  
+  </div>
+  </Form>
   <div id="result"></div>
 </body>
 </html>
